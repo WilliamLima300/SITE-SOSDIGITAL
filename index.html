@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>SOSDIGITAL</title>
+    
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="Images/flat_icon_SOS.png"
+    />
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/98fabc8589.js"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    
+
+
+
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="Images/logo_300x70px.png" alt="Logo SOSDIGITAL"
+      /></a>
+
+      <div class="item_1">
+        <a class="whatsapp-link" href="https://web.whatsapp.com" target="_blank"><p>Contato</p></a>
+        <a href="#form" class="btn">Faça um orçamento</a>
+      </div>
+    </header>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-Container fade">
+      <!-- Full images with numbers and message Info -->
+      <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img
+          src="Images/banner_secundario_1800x628px_03.png"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img
+          src="Images/banner_secundario_1800x628px_02.png"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img
+          src="Images/banner_secundario_1800x628px_01.png"
+          style="width: 100%"
+        />
+      </div>
+
+      <script>
+        var slidePosition = 1;
+        SlideShow(slidePosition);
+
+        //  images controls
+        function currentSlide(n) {
+          SlideShow((slidePosition = n));
+        }
+
+        function SlideShow(n) {
+          var i;
+          var slides = document.getElementsByClassName("Containers");
+          var circles = document.getElementsByClassName("dots");
+          if (n > slides.length) {
+            slidePosition = 1;
+          }
+          if (n < 1) {
+            slidePosition = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < circles.length; i++) {
+            circles[i].className = circles[i].className.replace(" enable", "");
+          }
+          slides[slidePosition - 1].style.display = "block";
+          circles[slidePosition - 1].className += " enable";
+        }
+
+        function SlideShow() {
+          var i;
+          var slides = document.getElementsByClassName("Containers");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slidePosition++;
+          if (slidePosition > slides.length) {
+            slidePosition = 1;
+          }
+          slides[slidePosition - 1].style.display = "flex";
+          setTimeout(SlideShow, 4000); // Change image every 2 seconds
+        }
+      </script>
+    </div>
+
+    <div class="bloco_3"></div>
+
+    <section class="pop">
+
+      <div class="Ban">
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container4">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides4 fade4">
+          
+            <a href="#abrirModal"><img src="Popup/pop_up_03.png" style="width:100%;border-radius: 15px;"></a>
+          
+          </div>
+      
+          <div class="mySlides4 fade4">
+          
+            <a href="#abrirModal2"><img src="Popup/pop_up_04.png" style="width:100%;border-radius: 15px;"></a>
+          
+          </div>
+      
+
+      
+          <!-- Next and previous buttons -->
+          <a class="prev4" onclick="plusSlides1(-1)">&#10094;</a>
+          <a class="next4" onclick="plusSlides1(1)">&#10095;</a>
+          
+          
+
+
+          
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides1(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide1(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides4");
+            var dots = document.getElementsByClassName("dot4");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+
+          </script>
+            <!-- conteúdo do popup aqui -->
+          <div id="abrirModal" class="modal">
+            <a href="#fechar" title="Fechar" class="fechar">x</a>
+            <img src="Popup/pop_up_02.png">
+   
+
+          </div>
+
+          <div id="abrirModal2" class="modal">
+            <a href="#fechar" title="Fechar" class="fechar">x</a>
+            <img src="Popup/pop_up_01.png">
+   
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+    
+
+      <div class="pop_texto">
+
+        <h1>Como vamos<br>ajudar você?</h1>
+
+        <h3>Consultoria TD - Transformação Digital:<br></h3>
+        <p>A consultoria TD atua com foco na melhora<br> da
+          produtividade, realizando integrações de<br> todo
+          processo interno, e tem como foco <br>entregar
+          mais sucesso aos clientes, automatizando <br>o
+          atendimento e criando mais agilidade nas<br>
+          tomadas de decisões.<br><br>
+        </p>
+
+        <h3>Consultoria IS - Inside Sales:<br></h3>
+        <p>A consultoria IS é focada no processo interno<br>
+          de vendas, onde realizamos um diagnóstico<br>
+          do momento atual da empresa e
+          desenhamos<br> estratégias que criam
+          oportunidades, e que<br> geram vendas
+          contínuas. Na consultoria<br> construímos toda a
+          jornada de atendimento<br> e contatos com os
+          leads até se tornarem clientes.<br>
+        </p>
+
+      </div>
+
+    </section>
+
+    
+
+    <div class="bloco_4">
+
+      <video autoplay muted loop id="myVideo">
+        <source src="banner video/banner-sos.mp4" type="video/mp4">
+      </video>
+
+
+          
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-Container2 fade2">
+      <!-- Full images with numbers and message Info -->
+      <div class="Containers2">
+        <img src="Images/banner_secundario_1800x500px_01.png" style="width: 100%"/>
+      </div>
+
+      <div class="Containers2">
+
+        <img src="Images/banner_secundario_1800x500px_02.png" style="width: 100%"/>
+
+      </div>
+
+      <div class="Containers2">
+        <img src="Images/banner_secundario_1800x500px_03.png" style="width: 100%"/>
+      </div>
+
+
+
+      <script>
+        var slidePosition = 1;
+        Slide(slidePosition);
+
+        // forward/Back controls
+        function plusSlides(n) {
+          Slide((slidePosition += n));
+        }
+
+        //  images controls
+        function currentSlide(n) {
+          Slide((slidePosition = n));
+        }
+
+        function Slide(n) {
+          var i;
+          var slides = document.getElementsByClassName("Containers2");
+          var circles = document.getElementsByClassName("dots2");
+          if (n > slides.length) {
+            slidePosition = 1;
+          }
+          if (n < 1) {
+            slidePosition = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < circles.length; i++) {
+            circles[i].className = circles[i].className.replace(" enable", "");
+          }
+          slides[slidePosition - 1].style.display = "block";
+          circles[slidePosition - 1].className += " enable";
+        }
+
+        function Slide() {
+          var i;
+          var slides = document.getElementsByClassName("Containers2");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slidePosition++;
+          if (slidePosition > slides.length) {
+            slidePosition = 1;
+          }
+          slides[slidePosition - 1].style.display = "flex";
+          setTimeout(Slide, 4000); // Change image every 2 seconds
+        }
+      </script>
+    </div>
+
+    <footer>
+      <form name="meu_form" id="form" action="getform" method="POST">
+        <h1>Faça um orçamento!</h1>
+
+        <input type="text" name="Nome" id="nomeid" placeholder="Digite seu nome:" required="required" />
+
+        <input type="email" name="Email" id="emailid" placeholder="Digite seu melhor e-email:" required="required"/>
+
+        <input type="text" id="foneid" placeholder="(DDD) + Telefone:" name="Fone" required="required"/>
+
+        <input type="text" name="website" id="siteid" placeholder="Digite seu website:" />
+
+        <textarea max-length="150" type="text" name="Mensagem" placeholder="Escreva uma mensagem:"></textarea>
+
+        <div class="field">
+          <label class="label">Qual melhor canal para conversarmos?</label>
+          <div class="control">
+            <div class="select"> 
+              <input id="teste2" type="radio" name="Forma  de Contato" value="Telefone" />
+              <label for="teste2"> Telefone</label>
+              <input id="teste3" type="radio" name="Forma  de Contato" value="Whatsapp" />
+              <label for="teste3"> whatsapp</label>
+              <input id="teste4" type="radio" name="Forma  de Contato" value="Email" />
+              <label for="teste4">E-mail</label>
+            </div>
+          </div>
+
+          <label class="label">Quero saber mais sobre:</label>
+          <div class="control">
+            <div class="select">
+              <input id="teste5" type="radio" name=" Saber sobre" value="Consultoria TD" />
+              <label for="teste5"> Consultoria TD</label>
+              <input id="teste6" type="radio" name=" Saber sobre" value="Consultoria IS" />
+              <label for="teste6"> Consultoria IS</label>
+            </div>
+          </div>
+        </div>
+
+        <input type="submit" class="enviar"  value="Enviar!" />
+
+        
+      </form>
+
+      <div class="social" id="ancor">
+        <p>Você encontra a gente<br /><b>também por aqui!</b></p>
+
+        <div class="s-m">
+          <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+
+          <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook-f"></i></a>
+
+          <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+        </div>
+        
+      </div>
+
+      <a href="Quimera" target="_blank"><img src="Images/logo_quimera.png" alt="desenvolvido por QUIMERA"></a>
+      
+     
+        
+      
+
+    </footer>
+
+    <a class="whatsapp-link1" href="https://api.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a>
+ 
+  </body>
+
+</html>
